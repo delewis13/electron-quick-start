@@ -4,3 +4,11 @@
 // `nodeIntegration` is turned off. Use `preload.js` to
 // selectively enable features needed in the rendering
 // process.
+
+const webview = document.getElementsByTagName("webview")[0]
+
+console.log("got webview: ", webview)
+
+webview.addEventListener("dom-ready", () => {
+  webview.openDevTools()
+})
